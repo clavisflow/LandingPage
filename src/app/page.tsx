@@ -200,7 +200,7 @@ export default function Home() {
               </span>
             </a>
             <div className="mt-8 flex max-w-lg flex-wrap gap-3">
-              {["VB6", "Access", "Excel VBA", "WinForms", "WPF", "ASP", "ASP.NET", "C#", "VB.NET", "SQL Server"].map(
+              {["VB6", "Access", "Excel VBA", "WinForms", "WPF", "Classic ASP", "ASP.NET", "C#", "VB.NET", "SQL Server"].map(
                 (tag) => (
                   <span
                     key={tag}
