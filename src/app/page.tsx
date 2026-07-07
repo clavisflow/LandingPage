@@ -429,7 +429,7 @@ export default function Home() {
                 Zenn
               </a>
               <a
-                href="https://twitter.com/clavisflow"
+                href="https://x.com/clavisflow"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex h-8 items-center rounded border border-[#9caf9d] px-3 text-xs font-medium"
