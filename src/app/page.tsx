@@ -477,8 +477,11 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="pb-8 text-center text-xs text-[#6b746c]">
-        © 2026 ClavisFlow
+      <footer className="flex flex-col items-center gap-2 pb-8 text-center text-xs text-[#6b746c]">
+        <a href="/privacy" className="transition hover:text-[#315940]">
+          プライバシーポリシー
+        </a>
+        <span>© 2026 ClavisFlow</span>
       </footer>
     </main>
   );

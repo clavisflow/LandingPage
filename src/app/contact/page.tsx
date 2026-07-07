@@ -40,7 +40,7 @@ export default function ContactPage() {
             まずは状況をお聞かせください
           </h1>
           <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-[#404b43]">
-            Windowsアプリ、ASP.NET、Access・Excel VBAなど、長く使われてきた業務システムの保守、改修、リプレース前の現状整理など、<br/>
+            長く使われてきた業務システムの保守、改修、リプレース前の現状整理など、<br/>
             まだ相談内容が固まっていない段階でも大丈夫です。
           </p>
 
@@ -52,6 +52,13 @@ export default function ContactPage() {
 
         <ContactForm />
       </section>
+
+      <footer className="flex flex-col items-center gap-2 pb-8 text-center text-xs text-[#6b746c]">
+        <Link href="/privacy" className="transition hover:text-[#315940]">
+          プライバシーポリシー
+        </Link>
+        <span>© 2026 ClavisFlow</span>
+      </footer>
     </main>
   );
 }
