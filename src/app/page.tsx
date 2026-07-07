@@ -360,6 +360,8 @@ export default function Home() {
             <a
               key={title}
               href={url}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group rounded-md border border-[#dce1d8] bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
             >
               <div
@@ -411,6 +413,8 @@ export default function Home() {
             <div className="mt-4 flex flex-wrap gap-2">
               <a
                 href="https://github.com/clavisflow"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex h-8 items-center gap-1 rounded border border-[#9caf9d] px-3 text-xs font-medium"
               >
                 <Code2 size={14} aria-hidden="true" />
@@ -418,13 +422,17 @@ export default function Home() {
               </a>
               <a
                 href="https://zenn.dev/clavisflow"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex h-8 items-center rounded border border-[#9caf9d] px-3 text-xs font-medium"
               >
                 Zenn
               </a>
               <a
                 href="https://x.com/clavisflow"
-                className="inline-flex h-8 items-center rounded border border-[#9caf9d] px-3 text-xs font-medium"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex h-8 items-center rounded border border-[#9caf9d] px-3 text-xs font-medium"
               >
                 X
               </a>
