@@ -40,14 +40,10 @@ export default function ContactPage() {
             まずは状況をお聞かせください
           </h1>
           <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-[#404b43]">
-            長く使われてきた業務システムの保守、改修、リプレース前の現状整理など、<br/>
+            保守、改修、リプレース前の現状整理など、<br/>
             まだ相談内容が固まっていない段階でも大丈夫です。
           </p>
 
-          <p className="mt-6 inline-flex items-center justify-center gap-2 text-sm text-[#4b564e]">
-            <ShieldCheck size={18} strokeWidth={1.8} aria-hidden="true" />
-            Formspree 経由で安全に送信されます。お問い合わせ対応以外には利用しません。
-          </p>
         </div>
 
         <ContactForm />
