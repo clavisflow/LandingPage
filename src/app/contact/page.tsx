@@ -16,7 +16,7 @@ export default function ContactPage() {
         <div className="mx-auto flex h-20 max-w-[1120px] items-center justify-between px-5 sm:px-8">
           <Link
             href="/"
-            className="brand-logo text-2xl text-[#2f5f43]"
+            className="brand-logo text-[1.7rem] text-[#2f5f43]"
             aria-label="ClavisFlow トップへ戻る"
           >
             ClavisFlow

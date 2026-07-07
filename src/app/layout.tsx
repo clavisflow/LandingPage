@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import {
   Geist,
   Geist_Mono,
+  Kalam,
   Kiwi_Maru,
   Zen_Kurenaido,
 } from "next/font/google";
@@ -15,6 +16,13 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const kalam = Kalam({
+  variable: "--font-logo",
+  weight: "700",
+  subsets: ["latin"],
+  display: "swap",
 });
 
 const zenKurenaido = Zen_Kurenaido({
@@ -58,7 +66,7 @@ export default function RootLayout({
   return (
     <html
       lang="ja"
-      className={`${geistSans.variable} ${geistMono.variable} ${zenKurenaido.variable} ${kiwiMaru.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${kalam.variable} ${zenKurenaido.variable} ${kiwiMaru.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

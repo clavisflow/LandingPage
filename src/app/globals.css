@@ -28,7 +28,7 @@ summary::-webkit-details-marker {
 }
 
 .brand-logo {
-  font-family: "Segoe Print", "Bradley Hand ITC", cursive;
+  font-family: var(--font-logo), cursive;
   font-weight: 700;
 }
 

@@ -157,7 +157,7 @@ export default function Home() {
       <header className="absolute left-0 right-0 top-0 z-20">
         <div className="hero-header-inner flex h-20 items-center justify-between">
           <div className="flex items-center gap-5">
-            <p className="brand-logo text-2xl text-[#2f5f43]">ClavisFlow</p>
+            <p className="brand-logo text-[1.7rem] text-[#2f5f43]">ClavisFlow</p>
             <p className="text-xs font-semibold sm:text-sm">
               レガシーシステムの相談室
             </p>
