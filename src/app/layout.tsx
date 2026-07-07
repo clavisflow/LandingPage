@@ -15,14 +15,14 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "ClavisFlow | レガシーシステムの相談室",
   description:
-    "VB6、Access、Excel VBA、WindowsForm、ASP、ASP.NET などのレガシーシステムを整理し、改善やリプレース判断を支援する相談サービスです。",
+    "Windows業務システムの現状整理・改善を支援。WinForms、WPF、ASP.NET、Access、Excel VBA、VB6など、長く使われてきたシステムの診断から改善方針の整理、保守まで対応しています。",
   alternates: {
     canonical: "https://clavisflow.net/",
   },
   openGraph: {
     title: "ClavisFlow | レガシーシステムの相談室",
     description:
-      "VB6、Access、Excel VBA、WindowsForm、ASP、ASP.NET などのレガシーシステムを整理し、改善やリプレース判断を支援する相談サービスです。",
+      "Windows業務システムの現状整理・改善を支援。WinForms、WPF、ASP.NET、Access、Excel VBA、VB6など、長く使われてきたシステムの診断から改善方針の整理、保守まで対応しています。",
     url: "https://clavisflow.net/",
     type: "website",
   },

@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowLeft, ArrowRight, FileBarChart } from "lucide-react";
+import { ArrowLeft, ArrowRight, Download, FileBarChart } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -9,6 +9,7 @@ type ReportCarouselProps = {
   slides: string[];
   title: string;
   format: string;
+  text?: string;
 };
 
 export function ReportCarousel({
@@ -16,6 +17,7 @@ export function ReportCarousel({
   slides,
   title,
   format,
+  text,
 }: ReportCarouselProps) {
   const [current, setCurrent] = useState(0);
 
@@ -32,7 +34,13 @@ export function ReportCarousel({
   };
 
   return (
-    <div className="group overflow-hidden rounded-md border border-[#d7d2c6] bg-white/92 shadow-[0_16px_45px_rgba(62,54,41,0.09)] transition hover:-translate-y-0.5 hover:bg-white hover:shadow-[0_20px_55px_rgba(62,54,41,0.12)]">
+    <div className="group overflow-hidden rounded-md border border-[#d7d2c6] bg-white/92 shadow-[0_12px_35px_rgba(62,54,41,0.07)]">
+      <div className="border-b border-[#d7d2c6] bg-[#fbfaf7] px-5 py-3">
+        <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-[#6b746c]">
+          <FileBarChart size={16} strokeWidth={1.7} aria-hidden="true" />
+          {format} / {current + 1} of {slides.length}
+        </p>
+      </div>
       <div className="report-preview relative overflow-hidden border-b border-[#d7d2c6] bg-white">
         <Image
           src={slides[current]}
@@ -77,24 +85,19 @@ export function ReportCarousel({
           </div>
         </div>
       </div>
-      <div className="flex min-w-0 items-center justify-between gap-4 px-5 py-4">
+      <div className="flex min-w-0 items-end justify-between gap-4 px-5 py-4">
         <div>
-          <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-[#6b746c]">
-            <FileBarChart size={16} strokeWidth={1.7} aria-hidden="true" />
-            {format} / {current + 1} of {slides.length}
-          </p>
-          <h3 className="mt-2 text-lg font-semibold text-[#1f2420]">{title}</h3>
+          <h3 className="text-lg font-semibold text-[#1f2420]">{title}</h3>
+          {text ? (
+            <p className="mt-1 text-sm leading-6 text-[#4b564e]">{text}</p>
+          ) : null}
         </div>
         <a
           href={href}
-          className="inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-[#315940]"
+          className="inline-flex h-10 shrink-0 items-center justify-center gap-2 rounded-md bg-[#315940] px-4 text-sm font-semibold text-white transition hover:bg-[#274a36]"
         >
-          サンプルダウンロード
-          <ArrowRight
-            size={17}
-            className="transition group-hover:translate-x-1"
-            aria-hidden="true"
-          />
+          <Download size={16} strokeWidth={2} aria-hidden="true" />
+          サンプルをダウンロード
         </a>
       </div>
     </div>

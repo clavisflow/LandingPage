@@ -1,22 +1,23 @@
 import {
+  ArchiveX,
   ArrowRight,
   Check,
   ChevronDown,
   Code2,
   Database,
+  Download,
   FileBarChart,
+  FileQuestion,
   FileSpreadsheet,
   GitCompareArrows,
   Mail,
   MessageCircle,
-  Send,
   Search,
+  Send,
+  SplitIcon,
   Stethoscope,
   UserRound,
   UserX2,
-  SplitIcon,
-  ArchiveX,
-  FileQuestion,
 } from "lucide-react";
 import Image from "next/image";
 import { ReportCarousel } from "./ReportCarousel";
@@ -78,30 +79,29 @@ const tools = [
   {
     icon: Stethoscope,
     title: "Excel Doctor",
-    text: "Excelファイルの構造や数式の問題点をチェック",
+    text: "Excelファイルの構造や数式・マクロの問題点をチェック",
     tone: "green",
     url: "https://exceldoctor.clavisflow.net/",
   },
   {
-    icon: Database,
-    title: "Access Explorer",
-    text: "Accessデータベースの構造を可視化",
-    tone: "rose",
-    url: "https://accessexplorer.clavisflow.net/",
-  },
-  {
     icon: GitCompareArrows,
     title: "Excel Compare",
-    text: "Excelファイルの差分をわかりやすく比較",
+    text: "Excelファイルの差分を分かりやすく比較。数式・書式・マクロまで比較可能。",
     tone: "blue",
     url: "https://excelcompare.clavisflow.net/",
+  },
+  {
+    icon: Database,
+    title: "Access Explorer",
+    text: "Accessファイルの構造を可視化。そのまま仕様書として使えるレポート出力可能。",
+    tone: "rose",
+    url: "https://accessexplorer.clavisflow.net/",
   },
 ];
 
 const reportSamples = [
   {
     href: "/docs/clavisflow-report-sample.pptx",
-    preview: "/report-previews/report-summary.png",
     slides: [
       "/report-previews/summary/slide-01.png",
       "/report-previews/summary/slide-02.png",
@@ -116,15 +116,15 @@ const reportSamples = [
     icon: FileBarChart,
     title: "診断レポート",
     format: "PowerPoint",
-    text: "経営判断や共有に使いやすい、要点をまとめたレポートです。",
+    text: "経営判断や共有に使いやすい、診断レポートです。",
   },
   {
     href: "/docs/clavisflow-detail-sample.xlsx",
     preview: "/report-previews/report-detail.png",
     icon: FileSpreadsheet,
-    title: "診断詳細",
+    title: "診断結果詳細",
     format: "Excel",
-    text: "調査結果や確認項目を一覧で追える、詳細データです。",
+    text: "診断結果を一覧で追える、詳細データです。",
   },
 ];
 
@@ -173,9 +173,9 @@ export default function Home() {
           <div className="max-w-2xl">
             <h1 className="hero-title text-[#111813]">
               <span className="hero-title-line">
-                <span className="hero-word hero-word-vb">VB6</span>
-                <span className="hero-kana hero-kana-ya">や</span>
-                <span className="hero-word hero-word-access">Access、</span>
+                <span className="hero-word hero-kana-mada">そのシステム</span>
+                {/* <span className="hero-kana hero-kana-ya"></span> */}
+                {/* <span className="hero-word hero-word-access">システム</span> */}
               </span>
               <span className="hero-title-line hero-title-line-marked">
                 <span className="hero-marker-target">
@@ -186,12 +186,14 @@ export default function Home() {
               </span>
             </h1>
             <p className="mt-8 text-lg font-semibold leading-9 text-[#202620]">
+              長く使われてきたシステムには、それだけの理由があります。
+              <br />
               無理にリプレースする前に、
               <br />
               まずは現状を整理してみませんか。
             </p>
             <a
-              href="#contact"
+              href="/contact"
               className="hero-cta mt-7 inline-flex min-h-12 max-w-full items-center justify-center gap-3 rounded-md bg-[#315940] px-7 py-3 text-white shadow-sm transition hover:bg-[#274a36]"
             >
               <Send size={18} strokeWidth={2.1} aria-hidden="true" />
@@ -200,16 +202,15 @@ export default function Home() {
               </span>
             </a>
             <div className="mt-8 flex max-w-lg flex-wrap gap-3">
-              {["VB6", "Access", "Excel VBA", "WinForms", "WPF", "Classic ASP", "ASP.NET", "C#", "VB.NET", "SQL Server"].map(
+              {["Windowsアプリ", "WinForms", "WPF", "ASP.NET", "Classic ASP", "Access", "Excel VBA", "SQL Server", "C#", "VB.NET", "VB6"].map(
                 (tag) => (
-                  <span
-                    key={tag}
-                    className="min-w-20 rounded-full border border-[#809283] bg-white/70 px-5 py-2 text-center text-sm font-medium text-[#1f2a22]"
-                  >
-                    {tag}
-                  </span>
-                ),
-              )}
+                <span
+                  key={tag}
+                  className="min-w-20 rounded-full border border-[#809283] bg-white/70 px-5 py-2 text-center text-sm font-medium text-[#1f2a22]"
+                >
+                  {tag}
+                </span>
+              ))}
             </div>
           </div>
         </div>
@@ -278,65 +279,70 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-[1440px] px-5 py-3 sm:px-8">
-        <div className="grid gap-5 rounded-md border border-[#e4dfd4] bg-[#f4f0e8] p-5 shadow-[0_18px_55px_rgba(62,54,41,0.06)] md:grid-cols-[0.58fr_2fr] md:p-5 lg:gap-6">
-          <div className="md:border-r md:border-[#d8d1c3] md:pr-5">
+        <div className="rounded-md border border-[#e4dfd4] bg-[#f4f0e8] p-5 shadow-[0_18px_55px_rgba(62,54,41,0.06)] md:p-6">
+          <div>
             <h2 className="text-2xl font-semibold leading-snug">診断レポート例</h2>
             <p className="mt-4 text-sm leading-7 text-[#4b564e]">
-              システム診断でご提供する成果物のサンプルをご覧いただけます。<br />
-              診断レポート(PowerPoint)と診断詳細(Excel)のサンプルを掲載しています。
+              システム診断でご提供する成果物のサンプルを掲載しています。
             </p>
           </div>
-          <div className="grid items-start gap-5 lg:grid-cols-[1.48fr_0.82fr]">
-            {reportSamples.map(({ href, preview, slides, icon: Icon, title, format }) => {
-              if (slides) {
-                return (
-                  <ReportCarousel
-                    key={href}
-                    href={href}
-                    slides={slides}
-                    title={title}
-                    format={format}
-                  />
-                );
-              }
-
-              return (
-              <a
-                key={href}
-                href={href}
-                  className="group overflow-hidden rounded-md border border-[#d7d2c6] bg-white/92 shadow-[0_12px_35px_rgba(62,54,41,0.07)] transition hover:-translate-y-0.5 hover:bg-white hover:shadow-[0_18px_45px_rgba(62,54,41,0.1)]"
-                >
-                <div className="report-preview overflow-hidden border-b border-[#d7d2c6] bg-white">
-                  <Image
-                    src={preview}
-                    alt={`${title}サンプルのプレビュー`}
-                    width={1600}
-                    height={900}
-                    className="aspect-video w-full object-cover transition duration-300 group-hover:scale-[1.015]"
-                  />
-                </div>
-                <div className="flex min-w-0 items-center justify-between gap-4 px-5 py-3">
-                  <div>
-                    <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-[#6b746c]">
-                      <Icon size={16} strokeWidth={1.7} aria-hidden="true" />
-                      {format}
-                  </p>
-                    <h3 className="mt-2 text-lg font-semibold text-[#1f2420]">
-                      {title}
-                    </h3>
-                    </div>
-                    <span className="inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-[#315940]">
-                    サンプルダウンロード
-                    <ArrowRight
-                      size={17}
-                      className="transition group-hover:translate-x-1"
-                      aria-hidden="true"
+          <div className="mt-5 grid items-start gap-5 lg:grid-cols-2">
+            {reportSamples.map(
+              ({ href, preview, slides, icon: Icon, title, format, text }) => {
+                if (slides) {
+                  return (
+                    <ReportCarousel
+                      key={href}
+                      href={href}
+                      slides={slides}
+                      title={title}
+                      format={format}
+                      text={text}
                     />
-                  </span>
-                </div>
-              </a>
-              );
-            })}
+                  );
+                }
+
+                return (
+                  <article
+                    key={href}
+                    className="overflow-hidden rounded-md border border-[#d7d2c6] bg-white/92 shadow-[0_12px_35px_rgba(62,54,41,0.07)]"
+                  >
+                    <div className="border-b border-[#d7d2c6] bg-[#fbfaf7] px-5 py-3">
+                      <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-[#6b746c]">
+                        <Icon size={16} strokeWidth={1.7} aria-hidden="true" />
+                        {format}
+                      </p>
+                    </div>
+                    <div className="report-preview overflow-hidden border-b border-[#d7d2c6] bg-white">
+                      <Image
+                        src={preview}
+                        alt={`${title}サンプルのプレビュー`}
+                        width={1600}
+                        height={900}
+                        className="aspect-video w-full object-cover object-left-top"
+                      />
+                    </div>
+                    <div className="flex min-w-0 items-end justify-between gap-4 px-5 py-4">
+                      <div>
+                        <h3 className="text-lg font-semibold text-[#1f2420]">
+                          {title}
+                        </h3>
+                        <p className="mt-1 text-sm leading-6 text-[#4b564e]">
+                          {text}
+                        </p>
+                      </div>
+                      <a
+                        href={href}
+                        className="inline-flex h-10 shrink-0 items-center justify-center gap-2 rounded-md bg-[#315940] px-4 text-sm font-semibold text-white transition hover:bg-[#274a36]"
+                      >
+                        <Download size={16} strokeWidth={2} aria-hidden="true" />
+                        サンプルをダウンロード
+                      </a>
+                    </div>
+                  </article>
+                );
+              },
+            )}
           </div>
         </div>
       </section>
@@ -345,9 +351,8 @@ export default function Home() {
         <div>
           <h2 className="text-2xl font-semibold">無料ツールも公開中</h2>
           <p className="mt-5 text-base leading-8 text-[#404b43]">
-            業務に役立つツールを
-            <br />
-            無料でご利用いただけます。
+            日常業務の「困りごと」を見える化する<br />
+            無料ツールを公開しています。
           </p>
         </div>
         <div className="grid gap-5 md:grid-cols-3">
@@ -382,7 +387,6 @@ export default function Home() {
             className="profile-photo flex size-28 items-center justify-center rounded-full bg-[#e5e1da] text-[#60705f]"
             aria-hidden="true"
           >
-            {/* <UserRound size={48} strokeWidth={1.2} /> */}
             <Image
               src="/profile-icon.png"
               alt="プロフィールアイコン"
@@ -394,13 +398,15 @@ export default function Home() {
           <div>
             <h2 className="text-xl font-semibold">プロフィール</h2>
             <p className="mt-4 text-sm leading-7 text-[#3f4942]">
-              25年以上、システム開発・保守に携わってきました。<br/>
-              C#・ASP.NET・Blazorを中心に、VB6、VBA、Classic ASPなどにも対応しています。<br/>
-              現場で培った経験をもとに、保守・改善・モダナイゼーションを支援します。
+              25年以上、システム開発・保守に携わってきました。
+              <br />
+              C#、ASP.NET、Blazorを中心に、VB6、VBA、Classic ASPなど、新旧さまざまな技術に対応しています。
+              <br />
+              困ったときに、まず相談していただける技術者を目指しています。
             </p>
             <div className="mt-4 text-sm flex flex-wrap gap-2">
               ・IPA プロジェクトマネージャ試験（高度情報処理技術者）<br/>
-              ・AWS 認定 ソリューションアーキテクト – アソシエイト
+              ・AWS 認定 ソリューションアーキテクト - アソシエイト
             </div>
             <div className="mt-4 flex flex-wrap gap-2">
               <a
@@ -418,7 +424,6 @@ export default function Home() {
               </a>
               <a
                 href="https://x.com/clavisflow"
-
                 className="inline-flex h-8 items-center rounded border border-[#9caf9d] px-3 text-xs font-medium"
               >
                 X
@@ -440,7 +445,9 @@ export default function Home() {
                     aria-hidden="true"
                   />
                 </summary>
-                <p className="pt-3 text-sm leading-7 text-[#4d584f]">{answer}</p>
+                <p className="pt-3 text-sm leading-7 text-[#4d584f]">
+                  {answer}
+                </p>
               </details>
             ))}
           </div>
@@ -461,7 +468,7 @@ export default function Home() {
             </p>
           </div>
           <a
-            href="mailto:contact@example.com"
+            href="/contact"
             className="inline-flex h-12 min-w-80 items-center justify-center gap-8 rounded-md bg-[#315940] px-8 text-base font-semibold text-white transition hover:bg-[#274a36]"
           >
             ご相談はこちら
