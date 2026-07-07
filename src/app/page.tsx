@@ -404,7 +404,7 @@ export default function Home() {
               <br />
               C#、ASP.NET、Blazorを中心に、VB6、VBA、Classic ASPなど、新旧さまざまな技術に対応しています。
               <br />
-              困ったときに、まず相談していただける技術者を目指しています。
+              困ったときに、「まず相談してみよう」と思っていただける技術者を目指しています。
             </p>
             <div className="mt-4 text-sm flex flex-wrap gap-2">
               ・IPA プロジェクトマネージャ試験（高度情報処理技術者）<br/>
