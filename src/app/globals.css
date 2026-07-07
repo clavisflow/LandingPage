@@ -42,8 +42,11 @@ summary::-webkit-details-marker {
   line-height: 1.32;
   letter-spacing: 0;
   text-shadow:
-    0.012em 0.014em 0 rgba(31, 36, 32, 0.08),
-    -0.01em 0.01em 0 rgba(49, 89, 64, 0.05);
+    0.014em 0 0 currentColor,
+    -0.008em 0 0 currentColor,
+    0 0.012em 0 currentColor,
+    0.022em 0.014em 0 rgba(31, 36, 32, 0.14),
+    -0.012em 0.012em 0 rgba(31, 36, 32, 0.08);
   transform: rotate(-2.1deg);
   transform-origin: left center;
 }
@@ -106,8 +109,10 @@ summary::-webkit-details-marker {
   font-weight: 400;
   letter-spacing: -0.035em;
   text-shadow:
-    0.01em 0.01em 0 rgba(31, 36, 32, 0.08),
-    -0.006em 0.008em 0 rgba(49, 89, 64, 0.05);
+    0.012em 0 0 currentColor,
+    -0.008em 0 0 currentColor,
+    0 0.01em 0 currentColor,
+    0.012em 0.01em 0 rgba(31, 36, 32, 0.1);
   transform: rotate(-1deg) translateY(0.03em);
 }
 
@@ -213,11 +218,11 @@ summary::-webkit-details-marker {
   .hero-visual {
     inset: 0;
     width: 100%;
-    opacity: 0.28;
+    opacity: 0.46;
   }
 
   .hero-fade {
-    background: linear-gradient(90deg, rgba(251, 250, 247, 0.96), rgba(251, 250, 247, 0.82));
+    background: linear-gradient(90deg, rgba(251, 250, 247, 0.84), rgba(251, 250, 247, 0.62));
   }
 }
 

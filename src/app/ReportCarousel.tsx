@@ -85,8 +85,8 @@ export function ReportCarousel({
           </div>
         </div>
       </div>
-      <div className="flex min-w-0 items-end justify-between gap-4 px-5 py-4">
-        <div>
+      <div className="flex min-w-0 flex-col gap-4 px-5 py-4 sm:flex-row sm:items-end sm:justify-between">
+        <div className="min-w-0">
           <h3 className="text-lg font-semibold text-[#1f2420]">{title}</h3>
           {text ? (
             <p className="mt-1 text-sm leading-6 text-[#4b564e]">{text}</p>
@@ -94,7 +94,7 @@ export function ReportCarousel({
         </div>
         <a
           href={href}
-          className="inline-flex h-10 shrink-0 items-center justify-center gap-2 rounded-md bg-[#315940] px-4 text-sm font-semibold text-white transition hover:bg-[#274a36]"
+          className="inline-flex h-10 shrink-0 items-center justify-center gap-2 rounded-md bg-[#315940] px-4 text-sm font-semibold text-white transition hover:bg-[#274a36] sm:self-end"
         >
           <Download size={16} strokeWidth={2} aria-hidden="true" />
           サンプルをダウンロード

@@ -158,7 +158,7 @@ export default function Home() {
         <div className="hero-header-inner flex h-20 items-center justify-between">
           <div className="flex items-center gap-5">
             <p className="brand-logo text-2xl text-[#2f5f43]">ClavisFlow</p>
-            <p className="hidden text-sm font-semibold sm:block">
+            <p className="text-xs font-semibold sm:text-sm">
               レガシーシステムの相談室
             </p>
           </div>
@@ -171,7 +171,7 @@ export default function Home() {
 
         <div className="hero-content relative z-10 flex min-h-[680px] items-center pb-16 pt-28">
           <div className="max-w-2xl">
-            <h1 className="hero-title text-[#111813]">
+            <h1 className="hero-title text-[#0b100d]">
               <span className="hero-title-line">
                 <span className="hero-word hero-kana-mada">そのシステム、</span>
                 {/* <span className="hero-kana hero-kana-ya"></span> */}
@@ -322,8 +322,8 @@ export default function Home() {
                         className="aspect-video w-full object-cover object-left-top"
                       />
                     </div>
-                    <div className="flex min-w-0 items-end justify-between gap-4 px-5 py-4">
-                      <div>
+                    <div className="flex min-w-0 flex-col gap-4 px-5 py-4 sm:flex-row sm:items-end sm:justify-between">
+                      <div className="min-w-0">
                         <h3 className="text-lg font-semibold text-[#1f2420]">
                           {title}
                         </h3>
@@ -333,7 +333,7 @@ export default function Home() {
                       </div>
                       <a
                         href={href}
-                        className="inline-flex h-10 shrink-0 items-center justify-center gap-2 rounded-md bg-[#315940] px-4 text-sm font-semibold text-white transition hover:bg-[#274a36]"
+                        className="inline-flex h-10 shrink-0 items-center justify-center gap-2 rounded-md bg-[#315940] px-4 text-sm font-semibold text-white transition hover:bg-[#274a36] sm:self-end"
                       >
                         <Download size={16} strokeWidth={2} aria-hidden="true" />
                         サンプルをダウンロード
