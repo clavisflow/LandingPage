@@ -173,7 +173,7 @@ export default function Home() {
           <div className="max-w-2xl">
             <h1 className="hero-title text-[#111813]">
               <span className="hero-title-line">
-                <span className="hero-word hero-kana-mada">そのシステム</span>
+                <span className="hero-word hero-kana-mada">そのシステム、</span>
                 {/* <span className="hero-kana hero-kana-ya"></span> */}
                 {/* <span className="hero-word hero-word-access">システム</span> */}
               </span>

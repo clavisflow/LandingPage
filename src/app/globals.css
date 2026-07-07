@@ -36,13 +36,15 @@ summary::-webkit-details-marker {
   position: relative;
   display: inline-block;
   padding-bottom: 0.22em;
-  font-family: "Segoe Print", "Yu Gothic", "Meiryo", cursive;
-  font-size: clamp(2.35rem, 3.65vw, 3.25rem);
+  font-family: var(--font-handwritten), "Yu Gothic", "Meiryo", cursive;
+  font-size: 3.25rem;
   font-weight: 400;
-  line-height: 1.24;
-  letter-spacing: -0.025em;
-  text-shadow: 0.018em 0.014em 0 rgba(31, 36, 32, 0.05);
-  transform: rotate(-1.35deg);
+  line-height: 1.32;
+  letter-spacing: 0;
+  text-shadow:
+    0.012em 0.014em 0 rgba(31, 36, 32, 0.08),
+    -0.01em 0.01em 0 rgba(49, 89, 64, 0.05);
+  transform: rotate(-2.1deg);
   transform-origin: left center;
 }
 
@@ -58,14 +60,23 @@ summary::-webkit-details-marker {
 .hero-title-line-marked::after {
   content: "";
   position: absolute;
-  left: -1.15em;
-  bottom: -0.03em;
+  left: -0.16em;
+  bottom: calc(-0.02em - 10px);
   z-index: -1;
-  width: 6.15em;
-  height: 0.3em;
-  background-image: url("data:image/svg+xml,%3Csvg width='620' height='50' viewBox='0 0 620 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 32C94 20 178 24 262 19C374 13 496 20 610 14' stroke='%23355f42' stroke-width='17' stroke-linecap='round' stroke-opacity='.82'/%3E%3Cpath d='M8 37C120 31 238 35 352 28C453 22 526 28 614 25' stroke='%23355f42' stroke-width='9' stroke-linecap='round' stroke-opacity='.42'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  width: calc(100% + 0.42em);
+  height: 0.24em;
+  border-radius: 6px;
+  background:
+    radial-gradient(ellipse at 8% 5%, rgba(251, 250, 247, 0.5) 0 16%, transparent 36%),
+    radial-gradient(ellipse at 26% 0%, rgba(251, 250, 247, 0.42) 0 13%, transparent 34%),
+    radial-gradient(ellipse at 46% 8%, rgba(251, 250, 247, 0.34) 0 11%, transparent 32%),
+    radial-gradient(ellipse at 68% 4%, rgba(251, 250, 247, 0.3) 0 10%, transparent 30%),
+    linear-gradient(92deg, rgba(240, 211, 74, 0.82) 0 58%, rgba(240, 211, 74, 0.56) 78%, rgba(240, 211, 74, 0.18) 100%),
+    linear-gradient(180deg, rgba(248, 226, 105, 0.66), rgba(241, 205, 52, 0.78));
+  mask-image: linear-gradient(90deg, #000 0 62%, rgba(0, 0, 0, 0.55) 82%, rgba(0, 0, 0, 0.16) 100%);
+  -webkit-mask-image: linear-gradient(90deg, #000 0 62%, rgba(0, 0, 0, 0.55) 82%, rgba(0, 0, 0, 0.16) 100%);
+  transform: rotate(-1.1deg);
+  transform-origin: left center;
   pointer-events: none;
 }
 
@@ -79,18 +90,25 @@ summary::-webkit-details-marker {
 }
 
 .hero-word-vb {
-  letter-spacing: -0.04em;
+  letter-spacing: 0;
   transform: rotate(-1.5deg) translateY(0.02em);
 }
 
 .hero-word-access {
-  letter-spacing: -0.035em;
+  letter-spacing: 0;
   transform: rotate(1.2deg) translateY(-0.015em);
 }
 
 .hero-word-geneki {
-  letter-spacing: -0.055em;
-  transform: rotate(-0.6deg) translateY(0.015em);
+  color: #315940;
+  font-family: var(--font-handwritten-accent), var(--font-handwritten), "Yu Gothic", "Meiryo", cursive;
+  font-size: 0.98em;
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  text-shadow:
+    0.01em 0.01em 0 rgba(31, 36, 32, 0.08),
+    -0.006em 0.008em 0 rgba(49, 89, 64, 0.05);
+  transform: rotate(-1deg) translateY(0.03em);
 }
 
 .hero-kana-ya {
@@ -101,15 +119,15 @@ summary::-webkit-details-marker {
 
 .hero-kana-mada {
   font-size: 0.9em;
-  letter-spacing: -0.06em;
-  transform: rotate(1deg) translateY(-0.01em);
+  letter-spacing: 0;
+  transform: rotate(1.8deg) translateY(-0.01em);
 }
 
 .hero-kana-tail {
   margin-left: 0.02em;
   font-size: 0.84em;
-  letter-spacing: -0.045em;
-  transform: rotate(1.1deg) translateY(0.02em);
+  letter-spacing: 0;
+  transform: rotate(2.4deg) translateY(0.02em);
 }
 
 .hero-marker-target {
@@ -209,7 +227,7 @@ summary::-webkit-details-marker {
   }
 
   .hero-title {
-    font-size: 2.08rem;
+    font-size: 2.22rem;
     line-height: 1.28;
   }
 }
