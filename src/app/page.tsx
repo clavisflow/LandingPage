@@ -13,7 +13,6 @@ import {
   Mail,
   MessageCircle,
   Search,
-  Send,
   SplitIcon,
   Stethoscope,
   UserRound,
@@ -192,15 +191,22 @@ export default function Home() {
               <br />
               まずは現状を整理してみませんか。
             </p>
-            <a
-              href="/contact"
-              className="hero-cta mt-7 inline-flex min-h-12 max-w-full items-center justify-center gap-3 rounded-md bg-[#315940] px-7 py-3 text-white shadow-sm transition hover:bg-[#274a36]"
-            >
-              <Send size={18} strokeWidth={2.1} aria-hidden="true" />
-              <span className="hero-cta-text">
-                まずはお気軽にご相談ください（無料）
-              </span>
-            </a>
+            <div className="mt-7 flex max-w-xl flex-col gap-4 sm:flex-row sm:items-center sm:gap-5">
+              <a
+                href="/contact"
+                className="hero-cta hero-cta-primary inline-flex min-h-12 max-w-full items-center justify-center gap-3 rounded-md bg-[#315940] px-7 py-3 text-white shadow-sm transition hover:bg-[#274a36]"
+              >
+                <MessageCircle size={18} strokeWidth={2.1} aria-hidden="true" />
+                <span className="hero-cta-text whitespace-nowrap">相談してみる (無料)</span>
+              </a>
+              <a
+                href="#report-sample"
+                className="hero-cta-secondary inline-flex min-h-12 max-w-full items-center justify-center gap-2 rounded-md border border-[#315940] bg-white/86 px-5 py-3 text-sm font-semibold text-[#315940] shadow-sm transition hover:bg-[#f4faf5]"
+              >
+                <FileBarChart size={17} strokeWidth={2} aria-hidden="true" />
+                <span className="whitespace-nowrap">診断レポートを見る</span>
+              </a>
+            </div>
             <div className="mt-8 flex max-w-lg flex-wrap gap-3">
               {["Windowsアプリ", "WinForms", "WPF", "ASP.NET", "Classic ASP", "Access", "Excel VBA", "SQL Server", "C#", "VB.NET", "VB6"].map(
                 (tag) => (
@@ -278,7 +284,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1440px] px-5 py-3 sm:px-8">
+      <section
+        id="report-sample"
+        className="scroll-mt-8 mx-auto max-w-[1440px] px-5 py-3 sm:px-8"
+      >
         <div className="rounded-md border border-[#e4dfd4] bg-[#f4f0e8] p-5 shadow-[0_18px_55px_rgba(62,54,41,0.06)] md:p-6">
           <div>
             <h2 className="text-2xl font-semibold leading-snug">診断レポート例</h2>
