@@ -4,7 +4,7 @@ import { ArrowLeft, MessageCircle, ShieldCheck } from "lucide-react";
 import { ContactForm } from "./ContactForm";
 
 export const metadata: Metadata = {
-  title: "ClavisFlow | 無料相談フォーム",
+  title: "無料相談フォーム | ClavisFlow",
   description:
     "Windowsアプリ、ASP.NET、Access・Excel VBAなど、長く使われてきた業務システムに関するご相談を受け付けています。困りごとが整理できていない段階でも、お気軽にご相談ください。",
 };

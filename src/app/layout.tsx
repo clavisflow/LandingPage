@@ -40,14 +40,14 @@ const kiwiMaru = Kiwi_Maru({
 });
 
 export const metadata: Metadata = {
-  title: "ClavisFlow | レガシーシステムの相談室",
+  title: "レガシーシステムの相談室 | ClavisFlow",
   description:
     "Windows業務システムの現状整理・改善を支援。WinForms、WPF、ASP.NET、Access、Excel VBA、VB6など、長く使われてきたシステムの診断から改善方針の整理、保守まで対応しています。",
   alternates: {
     canonical: "https://clavisflow.net/",
   },
   openGraph: {
-    title: "ClavisFlow | レガシーシステムの相談室",
+    title: "レガシーシステムの相談室 | ClavisFlow",
     description:
       "Windows業務システムの現状整理・改善を支援。WinForms、WPF、ASP.NET、Access、Excel VBA、VB6など、長く使われてきたシステムの診断から改善方針の整理、保守まで対応しています。",
     url: "https://clavisflow.net/",

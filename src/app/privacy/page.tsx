@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowLeft, FileText, Mail, ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "ClavisFlow | プライバシーポリシー",
+  title: "プライバシーポリシー | ClavisFlow",
   description:
     "ClavisFlowにおける個人情報の取得、利用目的、管理、第三者提供、開示等の請求、お問い合わせ窓口について記載しています。",
 };
