@@ -100,7 +100,7 @@ const tools = [
 
 const reportSamples = [
   {
-    href: "/docs/clavisflow-report-sample.pptx",
+    href: "/docs/clavisflow-report-sample.pdf",
     slides: [
       "/report-previews/summary/slide-01.png",
       "/report-previews/summary/slide-02.png",
@@ -111,10 +111,11 @@ const reportSamples = [
       "/report-previews/summary/slide-07.png",
       "/report-previews/summary/slide-08.png",
       "/report-previews/summary/slide-09.png",
+      "/report-previews/summary/slide-10.png",
     ],
     icon: FileBarChart,
     title: "診断レポート",
-    format: "PowerPoint",
+    format: "PDF",
     text: "経営判断や共有に使いやすい、診断レポートです。",
   },
   {
