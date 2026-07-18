@@ -357,6 +357,71 @@ export default function Home() {
         </div>
       </section>
 
+      <section
+        aria-labelledby="sync-coordinator-heading"
+        className="mx-auto max-w-[1440px] px-5 py-5 sm:px-8"
+      >
+        <div className="grid items-center gap-6 rounded-md border border-[#ccd8ce] bg-[#edf3ed] p-6 shadow-[0_14px_40px_rgba(49,89,64,0.07)] md:grid-cols-[5rem_minmax(0,1fr)_auto] md:p-8">
+          <div className="size-20 overflow-hidden rounded-[1.15rem] bg-[#13271f] shadow-sm">
+            <Image
+              src="/sync-brand-mark.png"
+              alt=""
+              width={80}
+              height={80}
+              className="size-full object-cover"
+            />
+          </div>
+
+          <div className="min-w-0">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#567060]">
+              開発プロダクト
+            </p>
+            <h2
+              id="sync-coordinator-heading"
+              className="mt-2 text-2xl font-semibold text-[#1f2420]"
+            >
+              SyncCoordinator
+              <span className="ml-2 text-lg font-medium text-[#486052]">
+                （SynCo）
+              </span>
+            </h2>
+            <p className="mt-3 max-w-3xl text-sm leading-7 text-[#404b43]">
+              既存の業務アプリやテーブルを変更せず、SQL
+              Server・MySQL・PostgreSQL間のデータ同期を構築・運用できるセルフホスト型プロダクトです。競合を検知し、自動または手動で安全に解決します。
+            </p>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {[
+                "Self-hosted",
+                "SQL Server",
+                "MySQL",
+                "PostgreSQL",
+              ].map((label) => (
+                <span
+                  key={label}
+                  className="rounded border border-[#c6d3c8] bg-white/70 px-2.5 py-1 text-xs font-medium text-[#45604e]"
+                >
+                  {label}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <a
+            href="https://synco.clavisflow.net/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex h-12 w-full items-center justify-center gap-3 rounded-md bg-[#315940] px-6 text-sm font-semibold text-white transition hover:bg-[#274a36] md:w-auto md:justify-self-end"
+          >
+            製品サイト・ドキュメントを見る
+            <ArrowRight
+              size={18}
+              className="shrink-0 transition group-hover:translate-x-1"
+              aria-hidden="true"
+            />
+          </a>
+        </div>
+      </section>
+
       <section className="mx-auto grid max-w-[1440px] gap-8 px-5 py-8 sm:px-8 md:grid-cols-[0.72fr_2.28fr]">
         <div>
           <h2 className="text-2xl font-semibold">無料ツールも公開中</h2>
