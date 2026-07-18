@@ -235,7 +235,9 @@ export default function Home() {
             >
               <Icon size={54} strokeWidth={1.4} className="text-[#56715e]" />
               <h3 className="mt-5 text-base font-semibold">{title}</h3>
-              <p className="mt-4 text-sm leading-7 text-[#455149]">{text}</p>
+              <p className="mt-4 text-[15px] leading-7 text-[#3f4b43]">
+                {text}
+              </p>
             </article>
           ))}
         </div>
@@ -276,8 +278,10 @@ export default function Home() {
                   <div className="flex size-16 items-center justify-center rounded-full border border-[#dfe4dc] bg-white text-[#426850]">
                     <Icon size={30} strokeWidth={1.5} aria-hidden="true" />
                   </div>
-                  <h3 className="mt-4 text-sm font-semibold">{title}</h3>
-                  <p className="mt-3 text-sm leading-6 text-[#4e5b52]">{text}</p>
+                  <h3 className="mt-4 text-[15px] font-semibold">{title}</h3>
+                  <p className="mt-3 text-[15px] leading-6 text-[#455149]">
+                    {text}
+                  </p>
                 </article>
               ))}
             </div>
@@ -292,7 +296,7 @@ export default function Home() {
         <div className="rounded-md border border-[#e4dfd4] bg-[#f4f0e8] p-5 shadow-[0_18px_55px_rgba(62,54,41,0.06)] md:p-6">
           <div>
             <h2 className="text-2xl font-semibold leading-snug">診断レポート例</h2>
-            <p className="mt-4 text-sm leading-7 text-[#4b564e]">
+            <p className="mt-4 text-[15px] leading-7 text-[#424d45]">
               システム診断でご提供する成果物のサンプルを掲載しています。
             </p>
           </div>
@@ -318,7 +322,7 @@ export default function Home() {
                     className="overflow-hidden rounded-md border border-[#d7d2c6] bg-white/92 shadow-[0_12px_35px_rgba(62,54,41,0.07)]"
                   >
                     <div className="border-b border-[#d7d2c6] bg-[#fbfaf7] px-5 py-3">
-                      <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-[#6b746c]">
+                      <p className="inline-flex items-center gap-2 text-[13px] font-semibold uppercase tracking-wide text-[#566159]">
                         <Icon size={16} strokeWidth={1.7} aria-hidden="true" />
                         {format}
                       </p>
@@ -337,7 +341,7 @@ export default function Home() {
                         <h3 className="text-lg font-semibold text-[#1f2420]">
                           {title}
                         </h3>
-                        <p className="mt-1 text-sm leading-6 text-[#4b564e]">
+                        <p className="mt-1 text-[15px] leading-6 text-[#424d45]">
                           {text}
                         </p>
                       </div>
@@ -373,7 +377,7 @@ export default function Home() {
           </div>
 
           <div className="min-w-0">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#567060]">
+            <p className="text-[13px] font-semibold tracking-[0.14em] text-[#3f5b47]">
               開発プロダクト
             </p>
             <h2
@@ -381,13 +385,12 @@ export default function Home() {
               className="mt-2 text-2xl font-semibold text-[#1f2420]"
             >
               SyncCoordinator
-              <span className="ml-2 text-lg font-medium text-[#486052]">
+              <span className="ml-2 text-lg font-medium text-[#3d5546]">
                 （SynCo）
               </span>
             </h2>
-            <p className="mt-3 max-w-3xl text-sm leading-7 text-[#404b43]">
-              既存の業務アプリやテーブルを変更せず、SQL
-              Server・MySQL・PostgreSQL間のデータ同期を構築・運用できるセルフホスト型プロダクトです。競合を検知し、自動または手動で安全に解決します。
+            <p className="mt-3 max-w-3xl text-[15px] leading-7 text-[#354139]">
+              既存の業務アプリやテーブルを変更せず、SQL Server・MySQL・PostgreSQL間のデータ同期を構築・運用できるセルフホスト型プロダクトです。競合を検知し、自動または手動で安全に解決します。
             </p>
             <div className="mt-4 flex flex-wrap gap-2">
               {[
@@ -398,7 +401,7 @@ export default function Home() {
               ].map((label) => (
                 <span
                   key={label}
-                  className="rounded border border-[#c6d3c8] bg-white/70 px-2.5 py-1 text-xs font-medium text-[#45604e]"
+                  className="rounded border border-[#b9c9bc] bg-white/80 px-2.5 py-1 text-[13px] font-medium text-[#36503f]"
                 >
                   {label}
                 </span>
@@ -410,7 +413,7 @@ export default function Home() {
             href="https://synco.clavisflow.net/"
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex h-12 w-full items-center justify-center gap-3 rounded-md bg-[#315940] px-6 text-sm font-semibold text-white transition hover:bg-[#274a36] md:w-auto md:justify-self-end"
+            className="group inline-flex h-12 w-full items-center justify-center gap-3 rounded-md bg-[#315940] px-6 text-[15px] font-semibold text-white transition hover:bg-[#274a36] md:w-auto md:justify-self-end"
           >
             製品サイト・ドキュメントを見る
             <ArrowRight
@@ -445,7 +448,7 @@ export default function Home() {
                 <Icon size={34} strokeWidth={1.4} aria-hidden="true" />
               </div>
               <h3 className="mt-5 font-semibold">{title}</h3>
-              <p className="mt-3 min-h-12 text-sm leading-6 text-[#4b564e]">
+              <p className="mt-3 min-h-12 text-[15px] leading-6 text-[#424d45]">
                 {text}
               </p>
               <ArrowRight
@@ -474,14 +477,14 @@ export default function Home() {
           </div>
           <div>
             <h2 className="text-xl font-semibold">プロフィール</h2>
-            <p className="mt-4 text-sm leading-7 text-[#3f4942]">
+            <p className="mt-4 text-[15px] leading-7 text-[#364139]">
               25年以上、システム開発・保守に携わってきました。
               <br />
               C#、ASP.NET、Blazorを中心に、VB6、VBA、Classic ASPなど、新旧さまざまな技術に対応しています。
               <br />
               困ったときに、「まず相談してみよう」と思っていただける技術者を目指しています。
             </p>
-            <div className="mt-4 text-sm flex flex-wrap gap-2">
+            <div className="mt-4 flex flex-wrap gap-2 text-[15px] text-[#364139]">
               ・IPA プロジェクトマネージャ試験（高度情報処理技術者）<br/>
               ・AWS 認定 ソリューションアーキテクト - アソシエイト
             </div>
@@ -520,7 +523,7 @@ export default function Home() {
           <div className="mt-4 divide-y divide-[#d9ded6] border-t border-[#d9ded6]">
             {faqs.map(({ question, answer }) => (
               <details key={question} className="group py-4">
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-semibold">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-[15px] font-semibold">
                   {question}
                   <ChevronDown
                     size={18}
@@ -528,7 +531,7 @@ export default function Home() {
                     aria-hidden="true"
                   />
                 </summary>
-                <p className="pt-3 text-sm leading-7 text-[#4d584f]">
+                <p className="pt-3 text-[15px] leading-7 text-[#424d45]">
                   {answer}
                 </p>
               </details>
